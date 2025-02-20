@@ -49,6 +49,10 @@ static int8_t gpio_port_clock_enable(MDR_PORT_TypeDef *port)
             RST_CLK_PCLKcmd(RST_CLK_PCLK_PORTE, ENABLE);
             break;
 
+        case (intptr_t)MDR_PORTF:
+            RST_CLK_PCLKcmd(RST_CLK_PCLK_PORTF, ENABLE);
+            break;
+
         default:
             return -2;
             break;
