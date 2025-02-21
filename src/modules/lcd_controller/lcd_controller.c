@@ -33,8 +33,16 @@ void lcd_controller_task(void *pv_arg)
     DELAY_Init(DELAY_MODE_DWT);
 
     lcd_init(&lcd0);    
+    uint8_t test[1024];
+    for (int i = 0; i < 1024; i++)
+    {
+        test[i]=0x00;
+    }
+    
+    
+    lcd_show_bitmap(&lcd0, test);
 
     while (1) {
-        vTaskDelay(1);
+        vTaskDelay(500);
     }
 }

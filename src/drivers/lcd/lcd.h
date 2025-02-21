@@ -28,6 +28,7 @@ struct lcd {
 int8_t lcd_delay(uint32_t us);
 
 void lcd_init(struct lcd *self);
+void lcd_show_bitmap(struct lcd *self, uint8_t *bitmap);
 void lcd_fill(struct lcd *self, uint8_t color);
 
 

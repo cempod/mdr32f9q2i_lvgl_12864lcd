@@ -13,7 +13,7 @@ void threads_init(void)
 
     xTaskCreate(led3_controller_task, "led3_controller", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
 
-    xTaskCreate(lcd_controller_task, "lcd_controller", configMINIMAL_STACK_SIZE * 2, NULL, tskIDLE_PRIORITY, NULL);
+    xTaskCreate(lcd_controller_task, "lcd_controller", configMINIMAL_STACK_SIZE * 3, NULL, tskIDLE_PRIORITY, NULL);
 
 }
 
