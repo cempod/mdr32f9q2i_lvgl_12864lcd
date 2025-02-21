@@ -79,10 +79,12 @@ add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT})
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/drivers/gpio)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/drivers/led)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/drivers/lcd)
 
 target_link_libraries(${PROJECT_NAME}.elf
     gpio_driver
     led_driver
+    lcd_driver
 )
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/modules/led_controller)
