@@ -1,0 +1,1 @@
+openocd -f interface/jlink.cfg -f ./mdr32f9q2i.cfg -c "program build/firmware.elf verify reset exit"
