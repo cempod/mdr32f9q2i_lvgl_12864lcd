@@ -25,7 +25,7 @@ struct lcd {
     uint32_t e_pin;
 };
 
-int8_t lcd_delay(uint32_t ms);
+int8_t lcd_delay(uint32_t us);
 
 void lcd_init(struct lcd *self);
 void lcd_fill(struct lcd *self, uint8_t color);

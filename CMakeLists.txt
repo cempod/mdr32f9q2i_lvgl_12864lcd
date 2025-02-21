@@ -88,9 +88,11 @@ target_link_libraries(${PROJECT_NAME}.elf
 )
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/modules/led_controller)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/modules/lcd_controller)
 
 target_link_libraries(${PROJECT_NAME}.elf
     led_controller_module
+    lcd_controller_module
 )
 
 add_library(freertos_config INTERFACE)

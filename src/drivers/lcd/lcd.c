@@ -10,7 +10,7 @@ void lcd_init(struct lcd *self) {
     lcd_delay(100);
     send_command(self, 0x3F, LCD_PART_LEFT);
     send_command(self, 0x3F, LCD_PART_RIGHT);
-    lcd_fill(self, 1);
+    lcd_fill(self, 0);
 }
 
 void lcd_fill(struct lcd *self, uint8_t color) {
@@ -33,7 +33,7 @@ void lcd_fill(struct lcd *self, uint8_t color) {
     
 }
 
-__attribute__ ((weak)) int8_t lcd_delay(uint32_t ms) {    
+__attribute__ ((weak)) int8_t lcd_delay(uint32_t us) {    
     return -1;
 }
 

@@ -1,5 +1,6 @@
 #include "rtos.h"
 #include "modules/led_controller/led_controller.h"
+#include "modules/lcd_controller/lcd_controller.h"
 #include <FreeRTOSConfig.h>
 
 void threads_init(void)
@@ -11,6 +12,8 @@ void threads_init(void)
     xTaskCreate(led2_controller_task, "led2_controller", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
 
     xTaskCreate(led3_controller_task, "led3_controller", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
+
+    xTaskCreate(lcd_controller_task, "lcd_controller", configMINIMAL_STACK_SIZE * 2, NULL, tskIDLE_PRIORITY, NULL);
 
 }
 
